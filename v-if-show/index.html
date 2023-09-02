@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+	div {
+		box-sizing: border-box;
+	}
+
+	.wrap {
+		width: 200px;
+		height: 100px;
+	}
+
+	.box {
+		float: left;
+		width: 100px;
+		height: 100px;
+		color: white;
+		text-align: center;
+		line-height: 100px;
+	}
+
+	.box1 {
+		background-color: red;
+	}
+
+	.box2 {
+		background-color: blue;
+	}
+</style>
+
+<body>
+	<div id="app">
+		<div class="wrap">
+			<div class="box box1" v-if="box1">
+				BOX1
+			</div>
+			<div class="box box2" v-show="box2">
+				BOX2
+			</div>
+		</div>
+		<button @click="showBoxOne">
+			show one
+		</button>
+		<button @click="showBoxTwo">
+			show two
+		</button>
+	</div>
+
+	<script src="index.js" type="text/javascript"></script>
+	<script>
+		new V({
+			el: '#app',
+			data: {
+				box1: false,
+				box2: false
+			},
+			methods: {
+				showBoxOne() {
+					console.log(this.data.box1);
+					this.box1 = !this.box1
+				},
+				showBoxTwo() {
+					console.log(this.data.box2);
+					this.box2 = !this.box2
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
