@@ -1,3 +1,7 @@
+import { complileTemplate } from "./compler";
+
+const nodePool = [];
+
 export function createApp(options) {
   for (let option in options) {
     switch (option) {
@@ -17,12 +21,17 @@ export function createApp(options) {
 
 function mount(el) {
   const app = document.querySelector(el);
-  console.log(app);
+  const oFrag = document.createDocumentFragment();
+  nodePool.forEach((node) => {
+    oFrag.appendChild(node);
+  });
+  app.appendChild(oFrag);
 }
 
 function initComponent(components) {
-  console.log(components);
   for (let component of components) {
     let [template, state] = component();
+    const node = complileTemplate(template, state);
+    nodePool.push(node);
   }
 }

@@ -1,3 +1,3 @@
-export { createApp } from "./application";
+export { createApp } from "./application.js";
 
-export { createReactive } from "./reactive";
+export { createReactive } from "./reactive.js";

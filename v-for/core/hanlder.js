@@ -6,6 +6,7 @@ const set = createSetter();
 
 function createGetter() {
   return function (target, key, receiver) {
+    console.log("Getter: ", key, target[key]);
     const res = Reflect.get(target, key, receiver);
 
     if (isObject(res)) {
@@ -17,6 +18,7 @@ function createGetter() {
 }
 function createSetter() {
   return function (target, key, value, receiver) {
+    console.log("Setter: ", key, target[key]);
     return Reflect(target, key, value, receiver);
   };
 }

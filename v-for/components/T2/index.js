@@ -1,15 +1,12 @@
-import { createReactive } from "../../core";
+import { createReactive } from "../../core/index.js";
 
 const template = `
-	<ul class="list">
+	<ul class="info">
 		<h1>{{ title }}</h1>
 		{{dateTime}}
-		<for data="list" tag="li" class="info">
+		<for data="info" tag="li" class="itme">
 			<span>name: {name}</span>
 			<span>sex: {sex}</span>
-			<for>
-				<span>hobbies: {hobbies}</span>
-			</for>
 		</for>
 	</ul>
 `;
@@ -23,13 +20,11 @@ export function T2() {
         id: 1,
         name: "zs",
         sex: "male",
-        hobbies: ["dance", "travel"],
       },
       {
         id: 2,
         name: "ls",
         sex: "female",
-        hobbies: ["sing", "movie"],
       },
     ],
   });
