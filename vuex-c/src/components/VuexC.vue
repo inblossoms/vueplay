@@ -7,6 +7,8 @@ const increase_m = () => {
 };
 const increase_a = () => {
   store.dispatch("increase");
+//   const info = store.getters.showInfo(store.that.state);
+//   console.log(info.value);
 };
 </script>
 

@@ -33,7 +33,8 @@ class Store {
 
     // store.getters.fn
     // 会丢失 this， 把 this 传过去
-    // store.getters = this.getters;
+    store.that = this;
+    store.getters = this.getters;
 
     app.provide("store", store);
   }
