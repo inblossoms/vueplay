@@ -1,6 +1,6 @@
 <script setup>
 import { default as useCounterStore } from "@/store/counter";
-// import { storeToRefs } from "@/pinia";
+// import { storeToRefs } from "pinia";
 
 const counter = useCounterStore();
 // const { count } = storeToRefs(counter);
