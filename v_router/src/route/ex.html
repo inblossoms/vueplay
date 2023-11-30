@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+</style>
+
+<body>
+	<button class="oBtn">click</button>
+
+	<script type="text/javascript">
+		let oBtn = document.querySelector('.oBtn');
+
+		window.addEventListener("DOMContentLoaded", () => {
+			console.log(location.hash);
+			// or history
+			console.log(location.pathname);
+		})
+
+		oBtn.addEventListener('click', () => {
+			location.hash = '#hash';
+			// or history
+			const state = {
+				title: 'title',
+				url: 'url'
+			}
+			history.pushState(state, '', 'url');
+		})
+
+		window.addEventListener('hashchange', () => {
+			console.log("hashchange: ", location.hash);
+			// or history
+			console.log(location.pathname);
+		})
+	</script>
+</body>
+
+</html>
