@@ -1,5 +1,5 @@
-# vueplay
-> 🤹‍♂️🕺🧗‍♂️🏇🏌️‍♂️🏂🏄‍♂️🚣‍♂️🏊‍♂️🤾‍♂️⛹️‍♂️🏋️‍♂️🚴‍♂️🚵
+# 🏌️‍♂️vueplay
+
 
 
 Each file here is a separate block of functionality that functionally simulates how the functionality of the internal parts of vue works.
